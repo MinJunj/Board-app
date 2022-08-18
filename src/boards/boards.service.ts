@@ -48,43 +48,4 @@ export class BoardsService {
     async getAllBoards(): Promise<Board[]> {
         return this.boardRepository.find();
     }
-
-        /*
-    getAllBoards(): Board[] {
-        return this.boards;
-    }
-
-    createBoard(createBoardDto: CreateBoardDto){
-        const {title, description} = createBoardDto;
-
-        const board: Board = {
-            id: uuid(),
-            title,
-            description,
-            status:BoardStatus.PUBLIC
-        }
-
-        this.boards.push(board);
-        return board;
-    }
-    getboardById(id: string): Board {
-        const found = this.boards.find((board) => board.id === id);
-
-        if(!found) {
-            throw new NotFoundException();
-        }
-
-        return found;
-    }
-
-    deleteBoard(id: string): void {
-        const found = this.getboardById(id);
-        this.boards = this.boards.filter((board) => board.id !== id);
-    }
-
-    updateBoardStatus(id: string, status: BoardStatus): Board {
-        const board = this.getboardById(id);
-        board.status = status;
-        return board;
-    }*/
 }
